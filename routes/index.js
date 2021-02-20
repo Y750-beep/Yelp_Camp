@@ -30,7 +30,7 @@ router.post("/register", function(req, res){
         passport.authenticate("local")(req, res, function(){
            console.log(user);
             req.flash("success", "Welcome " + user.username );
-            res.redirect("../Views/campgrounds/index");
+            res.redirect("campgrounds/index");
         });
            
         
@@ -38,7 +38,7 @@ router.post("/register", function(req, res){
 });
 //show login form
 router.get("/login", function(req, res){
-    res.render("login");
+    res.render("../Views/login");
 });
 //handling login logic
 router.post("/login", passport.authenticate("local",{
