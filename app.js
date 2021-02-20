@@ -14,7 +14,7 @@ var express       = require("express"),
 var commentRoute     = require("./routes/comments"),    
     campgroundRoute  = require("./routes/campground"),
     indexRoute       = require("./routes/index");
-   
+   const { resolve } = require("path");
 
 // mongodb://localhost:27017/yelp_camp_V11_updated
 mongoose.connect("mongodb+srv://dbadmin:Allah@123@cluster0.6svez.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true});
