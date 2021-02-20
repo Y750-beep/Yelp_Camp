@@ -65,12 +65,14 @@ app.use(function(req, res, next){
 //     });
 
     
-app.get("/", function(req, res){
-    res.render("landing");
-});
+
 app.use(indexRoute);
 app.use(campgroundRoute);
 app.use(commentRoute);
+
+app.get("/", function(req, res){
+    res.render("/landing");
+});
 
 var port = process.env.PORT || 3000;
 
