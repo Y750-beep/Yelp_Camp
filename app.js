@@ -71,7 +71,7 @@ app.use(campgroundRoute);
 app.use(commentRoute);
 
 app.get("/", function(req, res){
-    res.render("/landing");
+    res.render("landing.ejs");
 });
 
 var port = process.env.PORT || 3000;
