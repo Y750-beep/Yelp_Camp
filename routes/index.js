@@ -25,7 +25,7 @@ router.post("/register", function(req, res){
         if(err){
             // console.log(err)  if we want to see what type data is being returned
              req.flash("error", err.message );
-             return res.render("register");
+             return res.render("../Views/register");
         }
         passport.authenticate("local")(req, res, function(){
            console.log(user);
