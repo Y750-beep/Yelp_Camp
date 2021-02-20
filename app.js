@@ -16,11 +16,12 @@ var commentRoute     = require("./routes/comments"),
     indexRoute       = require("./routes/index");
    
 
-
-mongoose.connect("mongodb://localhost:27017/yelp_camp_V11",{useNewUrlParser: true, useUnifiedTopology: true});
+// mongodb://localhost:27017/yelp_camp_V11_updated
+mongoose.connect("mongodb+srv://dbadmin:Allah@123@cluster0.6svez.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{useNewUrlParser: true, useUnifiedTopology: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
+app.use(express.static(__dirname + "/public"));
 app.use(flash());
 // seedDB(); 
 
