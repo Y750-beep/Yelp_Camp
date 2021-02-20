@@ -9,10 +9,10 @@ var express = require("express");
 var router  = express.Router();
 var User    = require("../models/user");
 var passport = require("passport");
-const { resolve } = require("path");
+
 
 router.get("/register", function(req, res){
-    res.render("register");
+    res.render("../Views/register");
 });
 
 //handle signIn logic
@@ -30,7 +30,7 @@ router.post("/register", function(req, res){
         passport.authenticate("local")(req, res, function(){
            console.log(user);
             req.flash("success", "Welcome " + user.username );
-            res.redirect("/campgrounds");
+            res.redirect("../Views/campgrounds/index");
         });
            
         
