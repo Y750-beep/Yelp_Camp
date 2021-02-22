@@ -42,8 +42,8 @@ router.get("/login", function(req, res){
 });
 //handling login logic
 router.post("/login", passport.authenticate("local",{
-    successRedirect: "/campgrounds",
-    failureRedirect: "/login"
+    successRedirect: "../Views/campgrounds",
+    failureRedirect: "../Views/login"
 }), function(req, res){
 
 });
