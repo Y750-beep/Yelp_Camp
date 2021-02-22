@@ -30,7 +30,7 @@ router.post("/register", function(req, res){
         passport.authenticate("local")(req, res, function(){
            console.log(user);
             req.flash("success", "Welcome " + user.username );
-            res.redirect("campgrounds/index");
+            res.redirect("../Views/campgrounds/index");
         });
            
         
@@ -52,7 +52,7 @@ router.post("/login", passport.authenticate("local",{
 router.get("/logout", function(req,  res){
     req.logout();
     req.flash("success", "Logged You Out");
-    res.redirect("/campgrounds");
+    res.redirect("../Views/campgrounds");
 });
 
 
